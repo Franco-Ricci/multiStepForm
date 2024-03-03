@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FormHeader } from "../components/FormHeader";
 import { GlobalContext } from "../Hooks/GlobalContext";
 import { useState } from "react";
+import { StepsPage } from "../components/StepsPage";
 
 export function Step2() {
   const {
@@ -73,7 +74,7 @@ export function Step2() {
   }
   console.log(selectedPlan);
   console.log(optionSelected);
-  const stages = ["Your info", "Select plan", "Add-ons", "Summary"];
+
 
   function handleSubmit() {
     optionSelected ? setNoSelected(false) : setNoSelected(true);
@@ -147,7 +148,11 @@ export function Step2() {
           </div>
         </div>
       </div>
-      <div className="steps">
+
+      <StepsPage stepNumber={2}>
+
+</StepsPage>
+      {/* <div className="steps">
         <img src="/images/bg-sidebar-desktop.svg" alt="sidebar" />
         <div className="steps__container">
  
@@ -164,7 +169,7 @@ export function Step2() {
           ))}
      
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }

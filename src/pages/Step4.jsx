@@ -72,7 +72,7 @@ export function Step4() {
           
           <div className="total__container">
             <p className="total__text">Total (per month)</p>
-            <p className="total__price">${pickedAdd ? total + "/yr" : + total + "/mo"}</p>
+            <p className="total__price">${isChecked ? total + "/yr" : + total + "/mo"}</p>
           </div>
           
         <div className="btn__container">

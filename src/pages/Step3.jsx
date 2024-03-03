@@ -2,8 +2,10 @@ import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FormHeader } from "../components/FormHeader";
 import { GlobalContext } from "../Hooks/GlobalContext";
+import { StepsPage } from "../components/StepsPage";
 
 export function Step3() {
+  
   const { pickedAdd, setPickedAdd, errorText, setErrorText, isChecked } =
     useContext(GlobalContext);
 
@@ -130,47 +132,10 @@ export function Step3() {
           </div>
         </div>
       </div>
-      <div className="steps">
-        <img src="/images/bg-sidebar-desktop.svg" alt="asd" />
-        <div className="steps__container">
-          <div className="steps__content">
-            <span className="steps__number">1</span>
 
-            <div className="steps__text--container">
-              <p className="steps__title"> Step 1</p>
+     <StepsPage stepNumber={3}>
 
-              <p className="steps__desc"> Your info</p>
-            </div>
-          </div>
-          <div className="steps__content">
-            <span className="steps__number">2</span>
-
-            <div className="steps__text--container">
-              <p className="steps__title"> Step 2</p>
-
-              <p className="steps__desc"> Select plan</p>
-            </div>
-          </div>
-          <div className="steps__content">
-            <span className="steps__number--selected">3</span>
-
-            <div className="steps__text--container">
-              <p className="steps__title"> Step 3</p>
-
-              <p className="steps__desc"> Add-ons</p>
-            </div>
-          </div>
-          <div className="steps__content">
-            <span className="steps__number">4</span>
-
-            <div className="steps__text--container">
-              <p className="steps__title"> Step 4</p>
-
-              <p className="steps__desc">Summary</p>
-            </div>
-          </div>
-        </div>
-      </div>
+     </StepsPage>
     </main>
   );
 }
