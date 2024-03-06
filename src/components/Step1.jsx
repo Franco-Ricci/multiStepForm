@@ -63,12 +63,13 @@ export function Step1() {
       <div className="form__content">
         <div className="form">
           
-        <FormHeader
+   
+         
+          <form className="form__step" onSubmit={handleSubmit}>
+          <FormHeader
         title={"Personal Info"} info={" Please provide your name, email address, and phone number."}>
 
         </FormHeader>
-         
-          <form className="form__step" onSubmit={handleSubmit}>
             <label className="form__name" htmlFor="name">
               Name
             </label>

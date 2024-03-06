@@ -85,13 +85,14 @@ export function Step2() {
     <main className="form__container">
       <div className="form__content">
         <div className="form">
-          <FormHeader
+
+      
+
+        <div className="form__options">
+        <FormHeader
             title={"Select your plan"}
             info={"You have the option of monthly or yearly billing"}
           ></FormHeader>
-        </div>
-
-        <div className="form__options">
           <div className="options__container">
             {Data.map((item) => (
               <div
@@ -148,7 +149,7 @@ export function Step2() {
           </div>
         </div>
       </div>
-
+      </div>       
       <StepsPage stepNumber={2}>
 
 </StepsPage>

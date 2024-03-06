@@ -3,7 +3,7 @@ import { FormHeader } from "../components/FormHeader";
 import { GlobalContext } from "../Hooks/GlobalContext";
 import { useContext,useState} from "react";
 import { useEffect } from "react";
-
+import { StepsPage } from "../components/StepsPage";
 
 export function Step4() {
 
@@ -37,13 +37,14 @@ export function Step4() {
     <main className="form__container">
       <div className="form__content">
         <div className="form">
-        <FormHeader title={"Finishing up"} info={"Double-check everything looks OK before confirming."}>
 
-        </FormHeader>
-   
-        </div>
+     
 
         <form className="finishing__form">
+        <FormHeader title={"Finishing up"} info={"Double-check everything looks OK before confirming."}>
+
+</FormHeader>
+
           <div className="finishing__container">
             
               <div className="finishing__content">
@@ -56,7 +57,7 @@ export function Step4() {
                   
                   </div>
 
-                  <p className="finishing__price">${selectedPlan.price}{selectedPlan.price < 90 ? "/mo" : "/yr"}</p>
+                  <p className="finishing__price--bold">${selectedPlan.price}{selectedPlan.price < 90 ? "/mo" : "/yr"}</p>
                 </div>
               </div>
 
@@ -81,48 +82,11 @@ export function Step4() {
         
           </div>
         </form>
-      </div>
-      <div className="steps">
-        <img src="/images/bg-sidebar-desktop.svg" alt="asd" />
-        <div className="steps__container">
-          <div className="steps__content">
-            <span className="steps__number">1</span>
-
-            <div className="steps__text--container">
-              <p className="steps__title"> Step 1</p>
-
-              <p className="steps__desc"> Your info</p>
-            </div>
-          </div>
-          <div className="steps__content">
-            <span className="steps__number">2</span>
-
-            <div className="steps__text--container">
-              <p className="steps__title"> Step 2</p>
-
-              <p className="steps__desc"> Select plan</p>
-            </div>
-          </div>
-          <div className="steps__content">
-            <span className="steps__number">3</span>
-
-            <div className="steps__text--container">
-              <p className="steps__title"> Step 3</p>
-
-              <p className="steps__desc"> Add-ons</p>
-            </div>
-          </div>
-          <div className="steps__content">
-            <span className="steps__number--selected">4</span>
-
-            <div className="steps__text--container">
-              <p className="steps__title"> Step 4</p>
-
-              <p className="steps__desc">Summary</p>
-            </div>
-          </div>
         </div>
       </div>
+      <StepsPage stepNumber={3}>
+
+</StepsPage>
     </main>
   );
 }

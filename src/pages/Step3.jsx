@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FormHeader } from "../components/FormHeader";
 import { GlobalContext } from "../Hooks/GlobalContext";
@@ -55,12 +55,13 @@ export function Step3() {
     <main className="form__container">
       <div className="form__content">
         <div className="form">
-          <FormHeader
+        
+        
+        <div className="pickAdd__container">
+        <FormHeader
             title="Picks add-ons"
             info={" Adds-ons help enhace your gaming experience"}
           ></FormHeader>
-        </div>
-        <div className="pickAdd__container">
           {options.map((option, index) => (
             <div className="pickAdd__content" key={index}>
               <input
@@ -132,7 +133,7 @@ export function Step3() {
           </div>
         </div>
       </div>
-
+      </div>        
      <StepsPage stepNumber={3}>
 
      </StepsPage>
