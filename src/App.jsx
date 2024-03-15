@@ -17,6 +17,7 @@ function App() {
         <Route path="/step2" element={<Step2 />}></Route>
         <Route path="/step3" element={<Step3 />}></Route>
         <Route path="/step4" element={<Step4 />}></Route>
+        <Route path="*" element={<Step1 />}></Route>
       </Routes>
     </DataContext>
     </BrowserRouter>

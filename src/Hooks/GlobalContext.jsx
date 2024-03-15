@@ -17,16 +17,7 @@ export function DataContext({ children }){
       const [pickedAdd, setPickedAdd] = useState([])
       const [errorText, setErrorText] = useState(false)
     
-      console.log(isChecked)
-  console.log(pickedAdd)
-    const contextValue = {
-        formValues,
-        setFormValues,
-        
-      };
 
-      
-    
     return(
         <GlobalContext.Provider value={{formValues,setFormValues, isChecked, setIsChecked, noSelected, setNoSelected, optionSelected,setOptionSelected,selectedPlan,setSelectedPlan, pickedAdd, setPickedAdd, errorText, setErrorText}}>
             {children}
